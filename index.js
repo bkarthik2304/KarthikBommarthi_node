@@ -12,7 +12,7 @@ const server = http.createServer(async (req, res) => {
   const url = req.url;
 
   if (url === '/' || url === '/index.html') {
-    const filePath = path.join(__dirname, 'public', 'index.html');
+    const filePath = path.join(__dirname, 'Public', 'index.html');
     fs.readFile(filePath, (err, content) => {
       if (err) {
         res.writeHead(500);
@@ -42,7 +42,7 @@ const server = http.createServer(async (req, res) => {
       res.end('Error fetching data');
     }
   } else {
-    let filePath = path.join(__dirname, "public", req.url === "/" ? "index.html" : req.url);
+    let filePath = path.join(__dirname, "Public", req.url === "/" ? "index.html" : req.url);
     let ext = path.extname(filePath);
 
     let contentType = "text/html";
