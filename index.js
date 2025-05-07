@@ -5,7 +5,6 @@ const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
 const port = process.env.PORT || 4100;
-
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
@@ -43,8 +42,25 @@ const server = http.createServer(async (req, res) => {
       res.end('Error fetching data');
     }
   } else {
-    res.writeHead(404, { 'Content-Type': 'text/plain' });
-    res.end('404 Not Found');
+    let filePath = path.join(__dirname, "public", req.url === "/" ? "index.html" : req.url);
+    let ext = path.extname(filePath);
+
+    let contentType = "text/html";
+    if (ext === ".css") contentType = "text/css";
+    if (ext === ".js") contentType = "application/javascript";
+
+    fs.readFile(filePath, (err, content) => {
+      if (err) {
+        res.writeHead(404);
+        res.end("Page Not Found");
+      } else {
+        res.writeHead(200, {
+          "Content-Type": contentType,
+          "Access-Control-Allow-Origin": "*",
+        });
+        res.end(content);
+      }
+    });
   }
 });
 
