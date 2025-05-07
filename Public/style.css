@@ -1,0 +1,401 @@
+:root {
+    --my-radius: 18px;
+    --my-padding: 5px;
+    --mytext: 18px;
+    --headings-text: 25px;
+    --white: white;
+    --gray: #444449;
+    --grayish: #b8b8bd;
+    --secondary-gray: #a9a9ac;
+    --lightgray: #f3f3f3;
+    --black: #000000;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 20px;
+    background-color: var(--lightgray);
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto auto 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "nav nav"
+    "Box Box"
+    "projects projects"
+    "experience experience"
+    "education education"
+    "blogs blogs"
+    "footer footer";
+    height: 100vh;
+    grid-gap: 30px;
+}
+nav {
+    grid-area: nav;
+    background-color: var(--white);
+    height: 50px;
+    border-radius: var(--my-radius);
+    padding: 10px; /* Reduce padding */
+    width: 100%;
+    transition: transform 0.4s ease;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+    gap: 5px;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu{
+    text-decoration: none;
+    list-style: none;
+}
+.menu li a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    text-decoration: underline;
+}
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.Box {
+    grid-area: Box;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: 
+    "profile-image text-box"
+    "profile-image profile";
+}
+
+.profile-image {
+    grid-area: profile-image;
+    justify-self: center;
+}
+
+.profile-image img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--my-radius);
+    transition: transform 0.4s ease;
+}
+
+.profile-image img:hover {
+    transform: scale(1.008);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-box{
+    grid-area: text-box;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px;
+    margin-top: 100px;
+}
+.text-box h1{
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.text-box h2{
+    font-weight: normal;
+    font-size: 24px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.profile{
+    grid-area: profile;
+    background-color: var(--white);
+    border-radius: var(--my-radius);
+    align-self: end;
+    height: fit-content;
+    padding: 20px;
+    transition: transform 0.4s ease;
+}
+.text-box, .profile{
+    margin-left: 100px;
+}
+
+.profile h3{
+    font-weight: bold;
+    font-size: var(--headings-text);
+}
+
+.profile p{
+    text-align: justify;
+    font-size: var(--mytext);
+}
+
+#projects{
+    grid-area: projects;
+    background-color: var(--white);
+    border-radius: var(--my-radius);
+    padding: 20px;
+    transition: transform 0.4s ease;
+}
+.project-box{
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-areas: 
+    "project-img project-text"
+    "project-img project-text";
+}
+.project-img{
+    grid-area: project-img;
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}
+.project-text{
+    grid-area: project-text;
+    text-align: justify;
+    font-size: var(--mytext);
+    padding: 10px;
+}
+
+#experience{
+    grid-area: experience;
+    background-color: var(--white);
+    border-radius: var(--my-radius);
+    padding: 20px;
+    transition: transform 0.4s ease;
+}
+#experience{
+    text-align: justify;
+    font-size: var(--mytext);
+}
+
+#education {
+    grid-area: education;
+    background-color: var(--white);
+    border-radius: var(--my-radius);
+    padding: 20px;
+    transition: transform 0.4s ease;
+}
+
+.education-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Adds spacing between columns */
+}
+
+.education-column1, .education-column2 {
+    display: grid;
+    gap: 10px; /* Adds space between education-box items */
+    margin-left: 50px; /* Adjust alignment */
+}
+
+.education-box {
+    display: grid;
+    grid-template-columns: 40px auto; /* Icon on the left, text on the right */
+    align-items: center; /* Vertically center icon and text */
+    gap: 25px; /* Space between icon and text */
+}
+
+.edu-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+.edu-text {
+    color: var(--black);
+    font-size: var(--headings-text);
+    margin-left: 5px;
+}
+
+.edu-text h3 {
+    font-size: var(--mytext);
+    font-weight: bold;
+}
+
+.edu-text p {
+    font-size: 14px;
+    margin-top: 5px;
+
+}
+
+#blogs{
+    grid-area: blogs;
+    transition: transform 0.4s ease;
+}
+
+.skills-blogs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Adds spacing between columns */
+}
+
+.skills-column, .blogs-column {
+    display: grid;
+    font-size: var(--mytext);
+    gap: 10px; /* Adds space between education-box items */
+    margin-left: 10px; /* Adjust alignment */
+    border-radius: var(--my-radius);
+    background-color: var(--white);
+    padding: 20px;
+    transition: transform 0.4s ease;
+}
+
+.skill-box {
+    display: grid;
+    margin-left: 40px;
+    grid-template-columns: 40px auto; /* Icon on the left, text on the right */
+    align-items: center; /* Vertically center icon and text */
+    gap: 8px; /* Space between icon and text */
+
+}
+.skill-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.blogs-column ul{
+    list-style: none;
+    width: 100%; /* Makes sure the list takes full width */
+    padding: 0; /* Removes default padding */
+    margin-left: 30px; /* Removes default margin */
+    display: grid; /* Makes list items behave like grid elements */
+    gap: 8px; /* Adds space between items */
+}
+.blogs-list li {
+    margin-left: 20px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    text-align: center; /* Aligns content */
+
+}
+.footer a {
+    display: grid;
+    justify-self: center; /* Centers icons in their grid cells */
+}
+
+.footer a img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+    transition: transform 0.4s;
+}
+
+.footer a img:hover {
+    transform: scale(1.1);
+
+}
+
+.nav:hover, .profile:hover, #projects:hover, 
+#experience:hover, #education:hover, 
+.skills-column:hover , .blogs-column:hover{
+    transform: scale(1.008);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+
+@media (max-width: 500px) {
+    .menu {
+        display: none;
+        width: 100%;
+        margin-top: 23px;
+        background-color: var(--white);
+        border-radius: var(--my-radius);
+
+    }
+    .menu li {
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .menu-toggle {
+        display: block;
+        text-align: left;
+    }
+    .menu.show {
+        display: grid;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Single column */
+        grid-template-rows: auto auto auto; /* Stack all three */
+    }
+    .profile-image{
+        display: grid;
+        grid-column: 1;
+        grid-row: 1;
+        width: 200px;
+    }
+    .profile {
+        grid-column: 1;
+        grid-row: 3;
+        margin-left: 0px;
+        justify-self: center; /* Centering profile */
+    }
+
+    .text-box {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 0;
+        margin-left: 0;
+        font-size: 12px;
+        text-align: center;
+    }
+    .text-box h2{
+        font-size: 17px;
+    }
+    /* Responsive Layout */
+    .projects-container, .education-container, .skills-blogs-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .skills-column, .blogs-column{
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .footer {
+        display: grid;
+        text-align: center;
+    }
+}

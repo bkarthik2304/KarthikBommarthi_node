@@ -1,0 +1,85 @@
+{
+    "brands": [
+      {
+        "brandName": "Nike",
+        "originCountry": "USA",
+        "foundedYear": 1964,
+        "category": "Sportswear",
+        "popularProducts": ["Air Max", "Jordan", "Dri-FIT"],
+        "priceRange": "Mid-range",
+        "globalAvailability": ["USA", "UK", "India", "Australia"],
+        "officialWebsite": "https://www.nike.com"
+      },
+      {
+        "brandName": "Zara",
+        "originCountry": "Spain",
+        "foundedYear": 1974,
+        "category": "Casual",
+        "popularProducts": ["Jackets", "Dresses", "Shoes"],
+        "priceRange": "Affordable",
+        "globalAvailability": ["USA", "Europe", "Asia"],
+        "officialWebsite": "https://www.zara.com"
+      },
+      {
+        "brandName": "Adidas",
+        "originCountry": "Germany",
+        "foundedYear": 1949,
+        "category": "Sportswear",
+        "popularProducts": ["Ultraboost", "Superstar", "Predator"],
+        "priceRange": "Mid-range",
+        "globalAvailability": ["Global"],
+        "officialWebsite": "https://www.adidas.com"
+      },
+      {
+        "brandName": "H&M",
+        "originCountry": "Sweden",
+        "foundedYear": 1947,
+        "category": "Casual",
+        "popularProducts": ["T-Shirts", "Jeans", "Accessories"],
+        "priceRange": "Affordable",
+        "globalAvailability": ["Global"],
+        "officialWebsite": "https://www.hm.com"
+      },
+      {
+        "brandName": "Gucci",
+        "originCountry": "Italy",
+        "foundedYear": 1921,
+        "category": "Luxury",
+        "popularProducts": ["Handbags", "Belts", "Sneakers"],
+        "priceRange": "Luxury",
+        "globalAvailability": ["Global"],
+        "officialWebsite": "https://www.gucci.com"
+      },
+      {
+        "brandName": "Uniqlo",
+        "originCountry": "Japan",
+        "foundedYear": 1949,
+        "category": "Casual",
+        "popularProducts": ["Ultra Light Down", "Airism", "T-Shirts"],
+        "priceRange": "Affordable",
+        "globalAvailability": ["Asia", "USA", "Europe"],
+        "officialWebsite": "https://www.uniqlo.com"
+      },
+      {
+        "brandName": "Levi's",
+        "originCountry": "USA",
+        "foundedYear": 1853,
+        "category": "Casual",
+        "popularProducts": ["Jeans", "Denim Jackets", "T-Shirts"],
+        "priceRange": "Mid-range",
+        "globalAvailability": ["Global"],
+        "officialWebsite": "https://www.levi.com"
+      },
+      {
+        "brandName": "Lululemon",
+        "originCountry": "Canada",
+        "foundedYear": 1998,
+        "category": "Athleisure",
+        "popularProducts": ["Leggings", "Yoga Pants", "Sports Bras"],
+        "priceRange": "Luxury",
+        "globalAvailability": ["USA", "Canada", "Australia"],
+        "officialWebsite": "https://www.lululemon.com"
+      }
+    ]
+  }
+  
